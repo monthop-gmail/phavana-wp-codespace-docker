@@ -93,8 +93,8 @@ venv.bak/
 
 # Files that might appear in the root of a volume
 !.dockerignore
-docker-compose.yml
-Dockerfile
+# docker-compose.yml
+# Dockerfile
 
 # Docker
 **/docker-compose.override.yml
