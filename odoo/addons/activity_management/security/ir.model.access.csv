@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_activity_user,access.activity.user,model_activity_management_activity,,1,1,1,1
+access_sub_activity_user,access.sub_activity.user,model_activity_management_sub_activity,,1,1,1,1

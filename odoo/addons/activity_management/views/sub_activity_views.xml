@@ -1,0 +1,35 @@
+<odoo>
+    <record id="view_form_sub_activity" model="ir.ui.view">
+        <field name="name">sub_activity.form</field>
+        <field name="model">activity.management.sub_activity</field>
+        <field name="arch" type="xml">
+            <form string="Sub Activity">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="activity_id"/>
+                        <field name="duration"/>
+                        <field name="points"/>
+                        <field name="completed"/>
+                        <field name="user_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_sub_activity" model="ir.ui.view">
+        <field name="name">sub_activity.tree</field>
+        <field name="model">activity.management.sub_activity</field>
+        <field name="arch" type="xml">
+            <tree string="Sub Activities">
+                <field name="name"/>
+                <field name="activity_id"/>
+                <field name="duration"/>
+                <field name="points"/>
+                <field name="completed"/>
+                <field name="user_id"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

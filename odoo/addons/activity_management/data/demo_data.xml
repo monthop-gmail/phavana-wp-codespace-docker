@@ -1,0 +1,86 @@
+<odoo>
+    <!-- กิจกรรมประจำวัน -->
+    <record id="activity_daily" model="activity.management.activity">
+        <field name="name">Daily Activity</field>
+        <field name="start_date">2024-05-26 05:00:00</field>
+        <field name="end_date">2024-05-26 06:00:00</field>
+        <field name="activity_type">daily</field>
+        <field name="visible">True</field>
+    </record>
+
+    <record id="sub_activity_daily_pray" model="activity.management.sub_activity">
+        <field name="name">สวดมนต์</field>
+        <field name="duration">5</field>
+        <field name="points">5</field>
+        <field name="activity_id" ref="activity_daily"/>
+    </record>
+    <record id="sub_activity_daily_walk" model="activity.management.sub_activity">
+        <field name="name">เดินจงกรม</field>
+        <field name="duration">5</field>
+        <field name="points">5</field>
+        <field name="activity_id" ref="activity_daily"/>
+    </record>
+    <record id="sub_activity_daily_meditation" model="activity.management.sub_activity">
+        <field name="name">ทำสมาธิ</field>
+        <field name="duration">5</field>
+        <field name="points">5</field>
+        <field name="activity_id" ref="activity_daily"/>
+    </record>
+
+    <!-- กิจกรรมเนื่องในวันสำคัญ -->
+    <record id="activity_special_day" model="activity.management.activity">
+        <field name="name">วันละสังขาร</field>
+        <field name="start_date">2024-12-22 05:00:00</field>
+        <field name="end_date">2024-12-22 06:00:00</field>
+        <field name="activity_type">special_day</field>
+        <field name="visible">True</field>
+    </record>
+
+    <record id="sub_activity_special_day_pray" model="activity.management.sub_activity">
+        <field name="name">สวดมนต์</field>
+        <field name="duration">15</field>
+        <field name="points">15</field>
+        <field name="activity_id" ref="activity_special_day"/>
+    </record>
+    <record id="sub_activity_special_day_walk" model="activity.management.sub_activity">
+        <field name="name">เดินจงกรม</field>
+        <field name="duration">15</field>
+        <field name="points">15</field>
+        <field name="activity_id" ref="activity_special_day"/>
+    </record>
+    <record id="sub_activity_special_day_meditation" model="activity.management.sub_activity">
+        <field name="name">ทำสมาธิ</field>
+        <field name="duration">15</field>
+        <field name="points">15</field>
+        <field name="activity_id" ref="activity_special_day"/>
+    </record>
+
+    <!-- กิจกรรมเนื่องในช่วงวันสำคัญ -->
+    <record id="activity_special_period" model="activity.management.activity">
+        <field name="name">วันเกิดสวดลักขีบวชชีหมื่นคน</field>
+        <field name="start_date">2025-01-05 00:00:00</field>
+        <field name="end_date">2025-01-10 00:00:00</field>
+        <field name="activity_type">special_period</field>
+        <field name="interval_hours">4</field>
+        <field name="visible">True</field>
+    </record>
+
+    <record id="sub_activity_special_period_pray" model="activity.management.sub_activity">
+        <field name="name">สวดมนต์</field>
+        <field name="duration">15</field>
+        <field name="points">15</field>
+        <field name="activity_id" ref="activity_special_period"/>
+    </record>
+    <record id="sub_activity_special_period_walk" model="activity.management.sub_activity">
+        <field name="name">เดินจงกรม</field>
+        <field name="duration">15</field>
+        <field name="points">15</field>
+        <field name="activity_id" ref="activity_special_period"/>
+    </record>
+    <record id="sub_activity_special_period_meditation" model="activity.management.sub_activity">
+        <field name="name">ทำสมาธิ</field>
+        <field name="duration">15</field>
+        <field name="points">15</field>
+        <field name="activity_id" ref="activity_special_period"/>
+    </record>
+</odoo>

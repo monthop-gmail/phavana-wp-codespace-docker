@@ -1,0 +1,53 @@
+<odoo>
+    <record id="view_form_activity" model="ir.ui.view">
+        <field name="name">activity.form</field>
+        <field name="model">activity.management.activity</field>
+        <field name="arch" type="xml">
+            <form string="Activity">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="start_date"/>
+                        <field name="end_date"/>
+                        <field name="activity_type"/>
+                        <field name="interval_hours"/>
+                        <field name="visible"/>
+                        <field name="sub_activity_ids" widget="one2many_list">
+                            <tree editable="bottom">
+                                <field name="name"/>
+                                <field name="duration"/>
+                                <field name="points"/>
+                                <field name="completed"/>
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_activity" model="ir.ui.view">
+        <field name="name">activity.tree</field>
+        <field name="model">activity.management.activity</field>
+        <field name="arch" type="xml">
+            <tree string="Activities">
+                <field name="name"/>
+                <field name="start_date"/>
+                <field name="end_date"/>
+                <field name="activity_type"/>
+                <field name="interval_hours"/>
+                <field name="visible"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_activity" model="ir.actions.act_window">
+        <field name="name">Activities</field>
+        <field name="res_model">activity.management.activity</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    
+    <menuitem id="menu_activity_main" name="Activities" sequence="10"/>
+    <menuitem id="submenu_activity" name="Manage Activities" parent="menu_activity_main" action="action_activity"/>
+
+</odoo>
